@@ -1,0 +1,35 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'mcsq.nxa.screenshot'
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "mcsq.nxa.screenshot"
+        minSdk 21
+        targetSdk 32
+        versionCode 20230312
+        versionName "20230312"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+
+implementation 'androidx.core:core:1.7.0'
+}

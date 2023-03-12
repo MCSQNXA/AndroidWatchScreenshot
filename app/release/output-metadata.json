@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "mcsq.nxa.screenshot",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 20230312,
+      "versionName": "20230312",
+      "outputFile": "app-release.apk"
+    }
+  ],
+  "elementType": "File"
+}
