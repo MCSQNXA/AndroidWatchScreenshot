@@ -22,6 +22,7 @@ import android.os.SystemClock;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 import java.io.FileOutputStream;
 import java.nio.ByteBuffer;
@@ -71,7 +72,7 @@ public class MainActivity extends Activity {
 
     public Bitmap screenShot(MediaProjection mediaProjection) {
         WindowManager windowManager = this.getWindowManager();
-        
+
         int width = windowManager.getDefaultDisplay().getWidth();
         int height = windowManager.getDefaultDisplay().getHeight();
 
@@ -104,7 +105,11 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        TextView textView = new TextView(this);
+        textView.setText("/sdcard/Screenshot.png");
+
         super.onCreate(savedInstanceState);
+        super.setContentView(textView);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {//11
             if (!Environment.isExternalStorageManager()) {
