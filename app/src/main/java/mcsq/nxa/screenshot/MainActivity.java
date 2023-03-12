@@ -70,9 +70,10 @@ public class MainActivity extends Activity {
     }
 
     public Bitmap screenShot(MediaProjection mediaProjection) {
-        WindowManager wm1 = this.getWindowManager();
-        int width = wm1.getDefaultDisplay().getWidth();
-        int height = wm1.getDefaultDisplay().getHeight();
+        WindowManager windowManager = this.getWindowManager();
+        
+        int width = windowManager.getDefaultDisplay().getWidth();
+        int height = windowManager.getDefaultDisplay().getHeight();
 
         @SuppressLint("WrongConstant")
         ImageReader imageReader = ImageReader.newInstance(width, height, PixelFormat.RGB_565, 1);
